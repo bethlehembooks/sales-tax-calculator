@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Calculate Sales Tax" />
+<Content type="html"><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    <script language="JavaScript" type="text/javascript">
+
+    <!-- This script and many more are available free online at -->
+    <!-- The JavaScript Source!! http://www.javascriptsource.com -->
+    <!-- Original:  Gordon Hudson (sales@hostroute.com) -->
+    <!-- Web Site:  http://www.hostroute.com/ -->
+
+    <!-- Begin
+    function  doMath() {
+    var one = eval(document.myform.total.value)
+    var two = eval(document.myform.salestax.value)
+    var prod = one  *   two
+    document.myform.salestaxamount.value=custRound(prod,2);
+	document.myform.grandtotal.value=custRound(prod+one,2);
+    }
+    function custRound(x,places) {
+    return (Math.round(x*Math.pow(10,places)))/Math.pow(10,places)
+    }
+    //  End -->
+    </script>
+    <title>
+      Calculate sales tax
+    </title>
+    <style type="text/css">
+
+    body{
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    }
+
+    p, h1, form, button{border:0; margin:0; padding:0;}
+    .spacer{clear:both; height:1px;}
+
+    /* ----------- My Form ----------- */
+
+    .myform{
+    margin:0 auto;
+    width:290px;
+    padding:14px;
+    }
+
+    /* ----------- stylized ----------- */
+
+    #stylized{
+    //border:solid 2px #b7ddf2;
+    border:solid 2px #949494;
+    //background:#ebf4fb;
+    background:#FFF8E0;
+    }
+
+    #stylized h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+    }
+
+    #stylized p{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:20px;
+    //border-bottom:solid 1px #b7ddf2;
+    border-bottom:solid 1px #949494;
+    padding-bottom:10px;
+    }
+	
+    #stylized ol{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:10px;
+    //border-bottom:solid 1px #b7ddf2;
+    border-bottom:solid 1px #949494;
+    padding-bottom:10px;	
+    }
+
+    #stylized label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    margin-top:3px;
+    float:left;
+    }
+
+    #stylized .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+    }
+
+    #stylized input{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #949494;
+    text-align:right;  
+    width:75px;
+    margin:2px 0 20px 10px;
+    }
+
+    #stylized option{
+    font-size:12px;
+    text-align:left;  
+    margin:2px 0 5px 0;
+    }
+
+    #stylized select{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #949494;
+    text-align:left;  
+    //width:140px;
+    margin:2px 0 20px 10px;
+    }
+	
+    #stylized button{
+    clear:both;
+    margin-left:214px;
+	//float:right;
+    width:75px;
+    height:31px;
+    background:#666666 url(img/button.png) no-repeat;
+    text-align:center;
+    line-height:31px;
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:20px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="stylized" class="myform">
+      <form name="myform" id="myform">
+        <h1>
+          Calculate sales tax
+        </h1>
+          <ol>
+		  <li>Enter the total before sales tax</li>
+		  <li>Select the state</li>
+		  <li>Press the <strong>Calculate</strong> button to figure the sales tax amount</li>
+		  <li>(Click on the <strong>Reset</strong> button to clear all fields and start over)</li>
+		  </ol>
+		<label>Total before sales tax</label> <input type="text" name="total" id="total"> <label>State </label>
+		 <select name="salestax">
+          <option value=".075" selected>
+            California (7.5%)
+          </option>
+          <option value=".029">
+            Colorado (2.9%)
+          </option>
+          <option value=".06">
+            Florida (6.0%)
+          </option>          
+          <option value=".06">
+            Michigan (6.0%)
+          </option>
+          <option value=".04225">
+            Missouri (4.225%)
+          </option>
+          <option value=".0675">
+            North Carolina (6.75%)
+          </option>          
+          <option value=".05">
+            North Dakota (5.0%)
+          </option>
+          <option value=".0625">
+            Texas (6.25%)
+          </option>
+          <option value=".05">
+            Virginia (5.0%)
+          </option>
+         </select>
+		<button type="button" value="Calculate" onclick="doMath()" name="button">Calculate</button>
+        <label>Sales tax amount</label> <input type="text" name="salestaxamount" id="salestaxamount">
+        <label>Total with sales tax</label> <input type="text" name="grandtotal" id="grandtotal">
+        <button type="reset">Reset</button>		
+		<div class="spacer"></div>
+      </form>
+    </div>
+  </body>
+</html>
+]]></Content>
+</Module>
+
